@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>HTTP request by AJAX - Open Weather Map</title>
+
+<style type="text/css">
+
+  body{
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container{
+    width: 300px;
+    background-color: #f4f4f4;
+    padding: 10px;
+  }
+</style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="display"></div>
+    <button type="button" id="btn">Load Data</button>
+    
+  </div>
+    <script type="text/javascript">
+
+       
+
+       
+
+       const getdisplay = document.getElementById('display');
+       const getbtn = document.getElementById('btn');
+
+       getbtn.addEventListener('click',function(){
+         loaddata();
+       });
+
+       function loaddata(){
+
+        const key = `p9kk103z9mf567tn`;
+        const uri =`https://api.ipregistry.co?key=${key}`;
+        const xmlhttp = new XMLHttpRequest();
+
+
+        
+        xmlhttp.open('GET',uri);//default mean yes synchronize
+
+
+        xmlhttp.onload = function(){
+            let result = xmlhttp.response;
+
+            result = JSON.parse(result);
+            console.log(result);
+
+            let html = `
+
+                        <ul>
+                            <li>External IP = ${result.ip}</li>
+                            <li>Current Device = ${data.user_agent.device.name}/${data.user_agent.device.ty}</li>
+                            <li>Load By = ${data.user_agent.os.name}</li>
+                          <li>City = ${data.user_agent.type}</li>
+                            <li>Local Currency = ${result.currency.symbol}</li>
+
+                            <li>Time Zone = ${result.ip['time_zone']['id']}</li>
+                            
+                            
+                            
+                        </ul>
+                        `;
+        }
+
+        xmlhttp.send();
+
+    }
+
+       
+       
+       
+       </script>
+</body>
+
+
+
+
+</html>
+
+<!--IP
+
+Local IP
+
+External IP
+    (i)Public IP  / Dynamic IP
+    (ii)Fixed IP  / Static IP
+
+-->
+

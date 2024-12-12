@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>HTTP request by AJAX - Open Weather Map</title>
+
+<style type="text/css">
+
+  body{
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container{
+    width: 300px;
+    background-color: #f4f4f4;
+    padding: 10px;
+  }
+</style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="display"></div>
+    <button type="button" id="btn">Load Data</button>
+    
+  </div>
+    <script type="text/javascript">
+
+       
+
+       
+
+       const getdisplay = document.getElementById('display');
+       const getbtn = document.getElementById('btn');
+
+       getbtn.addEventListener('click',function(){
+         loaddata();
+       });
+
+       function loaddata(){
+        const key = `p9kk103z9mf567tn`;
+        const uri =`https://api.ipregistry.co?key=${key}`;
+
+
+        fetch(uri).then(function(response){
+
+          return response.json();
+
+
+        }).then(function(data){
+
+          //consolel.log(data);
+          data.products(function(product){
+            console.log(products);
+          })
+          
+        }).catch(function(err){
+
+          console.log(err);
+
+        });
+
+
+      }
+      
+       
+
+       
+       
+       
+       </script>
+</body>
+
+
+
+
+</html>
+

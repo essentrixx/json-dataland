@@ -1,0 +1,102 @@
+{
+    "articles":[
+    {
+        "title":"This is new article 1",
+        "conteet":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "rating":5
+    
+    },
+
+    {
+        "title":"This is new article 3",
+        "conteet":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "rating":5
+    
+    },
+
+    {
+        "title":"This is new article 5",
+        "conteet":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "rating":5
+    
+    },
+
+    {
+        "title":"This is new article 7",
+        "conteet":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "rating":5
+    
+    }
+],
+
+    "sports":[
+
+    {
+
+        "title":"This is new sport 2",
+        "conteet":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "rating":5
+
+    },
+
+    {
+
+        "title":"This is new sport 4",
+        "conteet":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "rating":5
+
+    },
+
+    {
+
+        "title":"This is new sport 6",
+        "conteet":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "rating":5
+
+    },
+
+    {
+
+        "title":"This is new sport 8",
+        "conteet":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "rating":5
+
+    }
+],
+
+
+    "stories":[
+    {
+
+        "title":"This is new story 9",
+        "conteet":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "rating":5
+
+    },
+
+    {
+
+        "title":"This is new story 10",
+        "conteet":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "rating":5
+
+    },
+
+    {
+
+        "title":"This is new story 11",
+        "conteet":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "rating":5
+
+    },
+
+    {
+
+        "title":"This is new story 12",
+        "conteet":"Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "rating":5
+
+    }
+
+]
+}

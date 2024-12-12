@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>HTTP request by AJAX - Open Weather Map</title>
+
+</head>
+
+<body>
+
+  <scrip src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript">
+    
+  </scrip>
+    <script type="text/javascript">
+
+        const latitude = "16.8080401";
+        const longetude ="96.2532293";
+
+        const key ="5d8493a88713f042f44bfe6c82b7a3b0";
+
+
+       let uri =`https://api.openweathermap.org/data/2.5/weather?lat=16.8080401&lon=6.2532293&appid=5d8493a88713f042f44bfe6c82b7a3b0`;
+
+       $.ajax({
+        method:"GET",
+        url:uri,
+       dataType:'json',//text
+     }).done((data)=>{
+      console.log(data);
+      console.log(data.weather);//Dot Notation
+      console.log(data.weather[0].main);//Dot Notation
+      console.log(data.weather[0]["main"]);//Bracket Notation
+      console.log(data.wind.speed);//Btacekt Notation
+      console.log(data.wind["speed"]);//Bracket Notation
+      console.log(data["wind"]["speed"]);//Bracket Notation 7RG
+
+       
+     }).fail((err)=>{
+
+       console.log("err");
+   });
+
+       
+       </script>
+</body>
+
+
+
+
+</html>
+

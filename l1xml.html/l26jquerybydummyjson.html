@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Fetch - Dummy Json</title>
+
+<style type="text/css">
+
+  body{
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container{
+    width: 300px;
+    background-color: #f4f4f4;
+    padding: 10px;
+  }
+</style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="display"></div>
+    <button type="button" id="btn">Load Data</button>
+    
+  </div>
+  <script type="text/javascript">
+
+    //=> $.ajax();
+  
+    //$.ajax({
+     // method:'',
+     // url:url,
+     // dataType:'json'//text
+   // }).done((data)=>{
+   //   output
+   // }).fail(()=>{
+    //  error
+   // });
+  
+   const getdisplay = document.getElementById('display');
+         const getbtn = document.getElementById('btn');
+  
+         getbtn.addEventListener('click',function(){
+           loaddata();
+         });
+  
+         function loaddata(){
+         const uri =`fetch('https://dummyjson.com/products')`;
+       
+  
+   //=> $.ajax();
+  
+    $.ajax({
+     method:'GET',
+     url:uri,
+     dataType:'json'//text
+   }).done((data)=>{
+      //consolel.log(data);
+      console.log(data.products);
+
+      data.products.forEach(function(product){
+
+      console.log(product);
+
+      console.log(product.id,product.title,product.price);
+
+      });
+
+   }).fail((err)=>{
+     console.log(err);
+   });
+  
+  }   
+     
+
+       
+       
+       
+       </script>
+</body>
+
+
+
+
+</html>
+

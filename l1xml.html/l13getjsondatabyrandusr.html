@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>HTTP request by AJAX - Open Weather Map</title>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+
+       
+
+       let uri =`https://randomuser.me/api/`;
+
+       const xmlhttp = new XMLHttpRequest();
+       
+
+       console.log(xmlhttp);
+        // Result = oki
+       xmlhttp.open("GET",uri,true); // true mans synchronize
+       xmlhttp.send();
+
+
+        //No Result = oki
+        //xmlhttp.open("GET",uri,false); // true mans synchronize
+        //xmlhttp.send();
+
+
+       xmlhttp.onreadystatechange = function(){
+        //console.log("State Change = ", xmlhttp.readyState,xmlhttp.status);
+
+        if(xmlhttp.readyState === 4 && xmlhttp.status===200){
+            let result = xmlhttp.responseText;
+
+           // console.log(result);
+
+         result = JSON.parse(result);
+          //console.log(result);
+
+
+       console.log(result.results);
+       console.log(result.results[0]);
+       console.log(result.results[0].name);
+       console.log(result.results[0].name.title,result.results[0].name.first,result.results[0].name.last);
+
+       console.log(result.results[0]["name"]["title"],result.results[0]["name"]["first"],result.results[0]["name"]["last"]);
+
+      
+        }
+       }
+
+       // Result = oki
+       //xmlhttp.open("GET",uri,true); // true mans synchronize
+       //xmlhttp.send();
+
+
+        //Result = oki
+        //xmlhttp.open("GET",uri,false); // true mans synchronize
+        //xmlhttp.send();
+
+
+       
+      
+       
+       
+       
+       </script>
+</body>
+
+
+
+
+</html>
+
+<!--
+
+=> xmlhttp.onreadystatechange
+xmlhttp.readyState === 4
+
+
+0 = UNSENT open() has not been called yet
+1 = OPENED send() has been called
+2 = HEADER_RECEIVED send( ) has beeen called. and headers and status are avaliable
+3 = LOADING downlagding, responseText hold partical datas
+4 = DONE the operation is completed.
+
+-->

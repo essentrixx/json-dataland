@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Jquery AJAX- local</title>
+
+
+
+</head>
+
+<body>
+
+  <scrip src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript"></scrip>
+
+ 
+    <script type="text/javascript">
+
+      //=> $.ajax();
+
+      //$.ajax({
+       // method:'',
+       // url:url,
+       // dataType:'json'//text
+     // }).done((data)=>{
+     //   output
+     // }).fail(()=>{
+      //  error
+     // });
+
+      const url = "./l5simpledata.json";
+
+
+      //$.ajax({
+      //   method:"GET",
+      //   url:url,
+      //  dataType:'json'//text
+     // }).done((data)=>{
+      //    console.log(data);
+       //   console.log(typeof data);//object
+
+        //  console.log(data.firstname , data.lastname  );//Dot Notation
+       //   console.log(data.remark);//Dot Notation
+        //  console.log(data.qualify[0]["subject"],data.qualify[0]["mark"]);//Bracket NOtation
+
+     // }).fail(()=>{
+//
+    //    console.log("Error")
+   // });
+
+    //Method 2
+
+
+    
+   // $.ajax({
+      //   method:"GET",
+       //  url:url,
+       // dataType:'json',//text
+      //  success:(getdata)
+      //});
+
+     // function getdata(data,status,xhr){
+    //    console.log(data);
+     //   console.log(typeof data);//object
+
+     //   console.log(status);//success
+
+     //   console.log(xhr);
+      //  console.log(xhr.status);//200
+
+//
+      //  console.log(data.firstname , data.lastname  );//Dot Notation
+      //    console.log(data.remark);//Dot Notation
+       //   console.log(data.qualify[0]["subject"],data.qualify[0]["mark"]);//Bracket NOtation
+
+     // }
+
+
+     //Method 3 (short Hand)
+
+    // $.get(url,output);
+
+     //function output(data){
+       //  console.log(data);
+        // console.log(data.firstname,data.lastname);
+    // }
+
+
+
+
+    //Method 4
+
+    //$.getJSON(url,{
+    //  format:'json'//text
+    //}).done((data)=>{
+     //   output
+     // }).fail(()=>{
+      //  error
+     // }).always(function(){
+     //});
+
+
+
+     $.getJSON(url,{
+      format:"json"//text
+    }).done(function(data){
+        console.log(data);
+        console.log(data.firstname,data.lastname);
+     }).fail(function(){
+          console.log("Error");
+   }).always(function(){
+    console.log("Bye Bye");
+     });
+
+
+
+
+
+     
+
+       
+
+       
+
+       
+
+       
+       
+       
+       </script>
+</body>
+
+
+
+
+</html>
+
+<!--IP
+
+Local IP
+
+    (i)Public IP  / Dynamic IP
+    (ii)Fixed IP  / Static IP
+
+External IP
+    (i)Public IP  / Dynamic IP
+    (ii)Fixed IP  / Static IP
+
+-->
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Axios - Open Weather Map</title>
+
+</head>
+
+<body>
+
+  <scrip src="https://unpkg.com/axios/dist/axios.min.js" ></scrip>
+
+ 
+    <script type="text/javascript">
+
+        const latitude = "16.8080401";
+        const longetude ="96.2532293";
+
+        const key ="5d8493a88713f042f44bfe6c82b7a3b0";
+
+
+       let uri =`https://api.openweathermap.org/data/2.5/weather?lat=16.8080401&lon=6.2532293&appid=5d8493a88713f042f44bfe6c82b7a3b0`;
+
+         axios.get(url).then((response)=>{
+
+        console.log(response.data);
+        console.log(response.data.weather);//Dot Notation
+        console.log(response.data.weather[0].main);//Dot Notation
+        console.log(response.data.weather[0]["main"]);//Bracket Notation
+        console.log(response.data.wind.speed);//Btacekt Notation
+        console.log(response.data.wind["speed"]);//Bracket Notation
+        console.logresponse.(data["wind"]["speed"]);//Bracket Notation 7RG
+          
+       }).catch(err=>{
+        console.log(err);
+       });
+       
+       </script>
+</body>

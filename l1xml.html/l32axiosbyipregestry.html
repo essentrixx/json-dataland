@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Axios By Ipregestry</title>
+
+<style type="text/css">
+
+  body{
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container{
+    width: 300px;
+    background-color: #f4f4f4;
+    padding: 10px;
+  }
+</style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="display"></div>
+    <button type="button" id="btn">Load Data</button>
+    
+  </div>
+    <script type="text/javascript">
+
+       
+
+       
+
+       const getdisplay = document.getElementById('display');
+       const getbtn = document.getElementById('btn');
+
+       getbtn.addEventListener('click',function(){
+         loaddata();
+       });
+
+       function loaddata(){
+        const key = `p9kk103z9mf567tn`;
+        const uri =`https://api.ipregistry.co?key=${key}`;
+
+
+        //=> $.ajax();
+
+ axios.get(url).then((response)=>{
+
+  let html = `
+
+                        <ul>
+                            <li>External IP = ${response.data.ip}</li>
+                            <li>Current Device = ${response.data.user_agent.device.name}/${data.user_agent.device.ty}</li>
+                            <li>Load By = ${response.data.user_agent.os.name}</li>
+                          <li>City = ${response.data.user_agent.type}</li>
+                            <li>Local Currency = ${response.currency.symbol}</li>
+
+                            <li>Time Zone = ${response.data['time_zone']['id']}</li>
+                            
+                            
+                            
+                        </ul>
+                        `;
+}).catch(err=>{
+console.log(err);
+});
+  
+         }   
+     
+       
+       
+       
+       </script>
+</body>
+
+
+
+
+</html>
+

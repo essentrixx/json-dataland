@@ -1,0 +1,14 @@
+{
+    "firstmame":"Kyaw",
+    "lastname":"Zayar",
+    "age":15,
+    "tax":false,
+    "passport":null,
+    "remark":"Lorec Ipsim is simpiy.......",
+    "hloiday":["saturday","Sunday"],
+    "qualify":[
+        {"subject":"myanmar","mark":80},
+        {"subject":"english","mark":90},
+        {"subject":"math","mark":100}
+    ]
+}

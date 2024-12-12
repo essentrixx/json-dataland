@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>JSON.parse and JSON.stringify</title>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        const students = '{"firstname":"Kyaw Kyaw","lastname":"Zayar","age":15}'; //must be single line, cuz it's st
+
+        console.log(students);
+        console.log(typeof students);
+
+        studentobj = JSON.parse(students);
+        console.log(studentobj);
+        console.log(typeof studentobj);
+        console.log(studentobj.firstname,studentobj.lastname);
+
+
+        const staff = {
+            "firstname":"Hsu",
+            "lastname":"Myat",
+            "age":20
+        };
+
+        console.log(staff);
+        console.log(typeof staff);
+
+        const staffstr = JSON.stringify(staff);
+
+        console.log(staff);
+        console.log(typeof staff);
+        console.log(staff.firstname,staff.lastname);//undefined undefined
+
+       
+    </script>
+</body>
+
+
+
+
+</html>

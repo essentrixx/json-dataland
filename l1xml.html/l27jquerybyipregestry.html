@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Jquery By Ipregestry</title>
+
+<style type="text/css">
+
+  body{
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container{
+    width: 300px;
+    background-color: #f4f4f4;
+    padding: 10px;
+  }
+</style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="display"></div>
+    <button type="button" id="btn">Load Data</button>
+    
+  </div>
+    <script type="text/javascript">
+
+       
+
+       
+
+       const getdisplay = document.getElementById('display');
+       const getbtn = document.getElementById('btn');
+
+       getbtn.addEventListener('click',function(){
+         loaddata();
+       });
+
+       function loaddata(){
+        const key = `p9kk103z9mf567tn`;
+        const uri =`https://api.ipregistry.co?key=${key}`;
+
+
+        $.ajax({
+     method:'GET',
+     url:uri,
+     dataType:'json'//text
+   }).done((data)=>{
+    //consolel.log(data);
+          data.products(function(product){
+            console.log(products);
+          })
+          
+   }).fail((err)=>{
+     console.log(err);
+   });
+  
+         }   
+     
+       
+       
+       
+       </script>
+</body>
+
+
+
+
+</html>
+
